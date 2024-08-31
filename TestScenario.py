@@ -31,7 +31,7 @@ def test_top_3_bars(search_base_url, headers):
     #("ymapsbm1://org?oid=225375811717", "Гамбринус"),
     #("ymapsbm1://org?oid=1234567890", "Шварцкайзер"),
     #"ymapsbm1://org?oid=9876543210", "Золотая вобла"),
-])
+#])
 def test_specific_bar_by_uri(geocode_base_url, headers, uri, expected_bar_name):
     url = f"{geocode_base_url}&uri={uri}&format=json"
     response = requests.get(url, headers=headers)
@@ -80,7 +80,7 @@ def headers_go():
     #("Ярославский вокзал, Москва", 200),
     #("Казанский вокзал, Москва", 400),
     #("Ленинградский вокзал, Москва", 400),
-])
+#])
 def test_geolocation_by_object(geocode_base_url, headers, object_name, expected_status_code):
     url = f"{geocode_base_url}&geocode=Ярославский вокзал&format=json"
     response = requests.get(url, headers=headers)
