@@ -27,11 +27,11 @@ def test_top_3_bars(search_base_url, headers):
     print(response.text)
 
 #Шаг №3: Поиск ближайшего бара по URI (например,"ymapsbm1://org?oid=225375811717" + параметризация)
-#@pytest.mark.parametrize("uri, expected_bar_name", [
-    #("ymapsbm1://org?oid=225375811717", "Гамбринус"),
-    #("ymapsbm1://org?oid=1234567890", "Шварцкайзер"),
-    #"ymapsbm1://org?oid=9876543210", "Золотая вобла"),
-#])
+@pytest.mark.parametrize("uri, expected_bar_name", [
+    ("ymapsbm1://org?oid=225375811717", "Гамбринус"),
+    ("ymapsbm1://org?oid=1234567890", "Шварцкайзер"),
+    "ymapsbm1://org?oid=9876543210", "Золотая вобла"),
+])
 def test_specific_bar_by_uri(geocode_base_url, headers, uri, expected_bar_name):
     url = f"{geocode_base_url}&uri={uri}&format=json"
     response = requests.get(url, headers=headers)
@@ -66,7 +66,7 @@ def test_geolocation_wrong(geocode_base_wrong_url, headers):
 
 @pytest.fixture
 def base_url_go():
-    return "https://geocode-maps.yandex.ru/1.x/?apikey=2fd5c994-1d9a-4c12-b654-bb859a04d497"
+    return "https://geocode-maps.yandex.ru/1.x/?apikey=d2d043c5-7d71-4622-9990-00c815078189"
 @pytest.fixture
 def search_url_go():
     return "https://search-maps.yandex.ru/v1/?apikey=d2d043c5-7d71-4622-9990-00c815078189"
@@ -76,11 +76,11 @@ def headers_go():
     return {}
 
 # Шаг № 1: Поиск геолокации по объекту, с параметризацией (г. Москва, Ярославский вокзал)
-#@pytest.mark.parametrize("object_name, expected_status_code", [
-    #("Ярославский вокзал, Москва", 200),
-    #("Казанский вокзал, Москва", 400),
-    #("Ленинградский вокзал, Москва", 400),
-#])
+@pytest.mark.parametrize("object_name, expected_status_code", [
+    ("Ярославский вокзал, Москва", 200),
+    ("Казанский вокзал, Москва", 400),
+    ("Ленинградский вокзал, Москва", 400),
+])
 def test_geolocation_by_object(geocode_base_url, headers, object_name, expected_status_code):
     url = f"{geocode_base_url}&geocode=Ярославский вокзал&format=json"
     response = requests.get(url, headers=headers)
