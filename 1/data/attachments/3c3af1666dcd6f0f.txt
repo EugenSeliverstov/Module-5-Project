@@ -1,0 +1,1 @@
+{"response":{"GeoObjectCollection":{"metaDataProperty":{"GeocoderResponseMetaData":{"found":"0"}},"featureMember":[]}}}
