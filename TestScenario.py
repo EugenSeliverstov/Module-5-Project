@@ -28,7 +28,7 @@ def test_top_3_bars(search_base_url, headers):
 
 #Шаг №3: Поиск ближайшего бара по URI (например,"ymapsbm1://org?oid=225375811717" + параметризация)
 #@pytest.mark.parametrize("uri, expected_bar_name", [
-    #"ymapsbm1://org?oid=225375811717", "Гамбринус"),
+    #("ymapsbm1://org?oid=225375811717", "Гамбринус"),
     #("ymapsbm1://org?oid=1234567890", "Шварцкайзер"),
     #"ymapsbm1://org?oid=9876543210", "Золотая вобла"),
 ])
