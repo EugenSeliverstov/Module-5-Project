@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sat Aug 31 11:46:50 GMT 2024","Sat Aug 31 11:46:50 GMT 2024","690","","TestScenario","","","","test_geolocation_wrong",""
+"passed","Sat Aug 31 11:46:46 GMT 2024","Sat Aug 31 11:46:48 GMT 2024","1789","","TestScenario","","","","test_geolocation_by_address",""
+"passed","Sat Aug 31 11:46:48 GMT 2024","Sat Aug 31 11:46:50 GMT 2024","1953","","TestScenario","","","","test_top_3_bars",""
+"passed","Sat Aug 31 11:46:50 GMT 2024","Sat Aug 31 11:46:51 GMT 2024","683","","TestScenario","","","","test_gym_names",""
+"broken","Sat Aug 31 11:46:50 GMT 2024","Sat Aug 31 11:46:50 GMT 2024","0","","TestScenario","","","","test_geolocation_by_object",""
+"broken","Sat Aug 31 11:46:50 GMT 2024","Sat Aug 31 11:46:50 GMT 2024","0","","TestScenario","","","","test_specific_bar_by_uri",""
