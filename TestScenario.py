@@ -30,7 +30,7 @@ def test_top_3_bars(search_base_url, headers):
 @pytest.mark.parametrize("uri, expected_bar_name", [
     ("ymapsbm1://org?oid=225375811717", "Гамбринус"),
     ("ymapsbm1://org?oid=1234567890", "Шварцкайзер"),
-    "ymapsbm1://org?oid=9876543210", "Золотая вобла"),
+    ("ymapsbm1://org?oid=9876543210", "Золотая вобла"),
 ])
 def test_specific_bar_by_uri(geocode_base_url, headers, uri, expected_bar_name):
     url = f"{geocode_base_url}&uri={uri}&format=json"
@@ -53,7 +53,7 @@ def test_specific_bar_by_uri(geocode_base_url, headers, uri, expected_bar_name):
 
 @pytest.fixture
 def geocode_base_wrong_url():
-    return "https://geocode-maps.yandex.ru/1.x/?apikey=2fd5c994-1d9a-4c12-b654-bb859a04d497"
+    return "https://geocode-maps.yandex.ru/1.x/?apikey=d2d043c5-7d71-4622-9990-00c815078189"
 
 # Шаг № 1:Геолокация по адресу (например, г. Москва, ул. Б. Спасская, д. 27)
 def test_geolocation_wrong(geocode_base_wrong_url, headers):
@@ -66,7 +66,7 @@ def test_geolocation_wrong(geocode_base_wrong_url, headers):
 
 @pytest.fixture
 def base_url_go():
-    return "https://geocode-maps.yandex.ru/1.x/?apikey=d2d043c5-7d71-4622-9990-00c815078189"
+    return "https://geocode-maps.yandex.ru/1.x/?apikey=2fd5c994-1d9a-4c12-b654-bb859a04d497"
 @pytest.fixture
 def search_url_go():
     return "https://search-maps.yandex.ru/v1/?apikey=d2d043c5-7d71-4622-9990-00c815078189"
@@ -93,6 +93,14 @@ def test_gym_names(search_base_url, headers):
      response = requests.get(url, headers=headers)
      assert response.status_code == 200
      print(response.text)
+
+
+
+
+
+
+
+
 
 
 
